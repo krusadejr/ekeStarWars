@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Star Wars Framework</title>
+    <meta name="description" content="Created as an extra for the module Enterprise Knowledge Engineering" />
+
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <hgroup>
+        <h1>Star Wars Project framework</h1>
+        <p>A proprietary ontology framwork assembling all the important entities, relationships and attributes to make the star wars triple store. Not to be used anywhere else, scope of this website extends to the project work ONLY.</p>
+        <p><small>Website made by Ayush Kumar</small></p>
+      </hgroup>
+      <nav>
+        <ul>
+          <li>
+            <details class="dropdown">
+              <summary role="button" class="secondary">Theme</summary>
+              <ul>
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ./ Header -->
+
+    <!-- Main -->
+    <main class="container">
+     
+
+      <!-- Typography-->
+      <section id="typography">
+        <h2>Important Information</h2>
+        <p>
+          This work is compiled with the intention of providing supporting information and proprietary data about the Star Wars triple store. 
+        </p>
+
+        <h3>Basic Class Defintions</h3>
+        <h5><a href="#Jedi">ex:Jedi</a></h5>
+<p>A member of the Jedi Order, dedicated to the principles of the Force.</p>
+
+<h5><a href="#Grandmaster">ex:Grandmaster</a></h5>
+<small>A Subclass of the <a href="#Jedi">Jedi</a> class</small>
+<p>The highest-ranking Jedi, responsible for leading the Jedi Order.</p>
+
+<h5><a href="#JediKnight">ex:JediKnight</a></h5>
+<small>A Subclass of the <a href="#Jedi">Jedi</a> class</small>
+<p>A fully trained Jedi who has completed their apprenticeship and is capable of undertaking independent missions.</p>
+
+<h5><a href="#JediMaster">ex:JediMaster</a></h5>
+<small>A Subclass of the <a href="#Jedi">Jedi</a> class</small>
+<p>A Jedi who has demonstrated exceptional skill and wisdom, often responsible for training Padawans.</p>
+
+<h5><a href="#JediCouncilMember">ex:JediCouncilMember</a></h5>
+<small>A Subclass of the <a href="#Jedi">Jedi</a> class</small>
+<p>A Jedi who serves on the Jedi High Council, involved in making important decisions for the Jedi Order.</p>
+
+<h5><a href="#TrainingProgram">ex:TrainingProgram</a></h5>
+<p>A structured program designed to train individuals in various Jedi skills and knowledge.</p>
+
+
+<h5><a href="#GroundVehicle">ex:GroundVehicle</a></h5>
+<small>A Subclass of the schema.org Type  <a href="https://schema.org/Vehicle">Vehicle</a> class</small>
+<p>A vehicle designed for travel on the ground, including speeder bikes and walkers.</p>
+
+<h5><a href="#Starship">ex:Starship</a></h5>
+<small>A Subclass of the schema.org Type  <a href="https://schema.org/Vehicle">Vehicle</a> class</small>
+<p>A spacecraft designed for travel in space, including starfighters and cruisers.</p>
+
+<h5><a href="#Planet">ex:Planet</a></h5>
+<p>A celestial body that orbits a star and can support various forms of life.</p>
+
+<h5><a href="#TempleInfrastructure">ex:TempleInfrastructure</a></h5>
+<p>Buildings and structures associated with the Jedi Temple, used for various purposes including training and governance.</p>
+
+<h5><a href="#Mission">ex:Mission</a></h5>
+<p>A specific task or operation undertaken by Jedi or other entities, often involving combat or diplomacy.</p>
+
+<h5><a href="#Artifact">ex:Artifact</a></h5>
+<p>An object of historical or cultural significance, often imbued with the Force or representing important Jedi heritage.</p>
+
+<h3>Propietary Attributes</h3> <!-------------------------------------------------------------------------->
+
+<h5><a href="#species">ex:species</a></h5>
+<p>Species in the context of Star Wars</p>
+<p>Accepts Text and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> elements as values.</p>
+<small>To be used as a property for the class <a href="#Jedi">Jedi</a>.</small>
+
+<h5><a href="#homeworld">ex:homeworld</a></h5>
+<p>Homeworld. Please note that homeworlds are not essentially planets.</p>
+<p>Accepts Text and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> elements as values.</p>
+<small>To be used as a property for the class <a href="#Jedi">Jedi</a>.</small>
+
+<h5><a href="#rank">ex:rank</a></h5>
+<p>Rank of a Jedi Member in this project.</p>
+<p>Accepts Text as a value.</p>
+<small>To be used as a property for the class <a href="#Jedi">Jedi</a>.</small>
+
+<h5><a href="#lightsaberColor">ex:lightsaberColor</a></h5>
+<p>Color of the Lightsaber.</p>
+<p>Accepts Text as a value.</p>
+<small>To be used as a property for the class <a href="#Jedi">Jedi</a>.</small>
+
+<h5><a href="#intendedLevel">ex:intendedLevel</a></h5>
+<p>Intended training level for the training program.</p>
+<p>Accepts Text as a value.</p>
+<small>To be used as a property for the class <a href="#TrainingProgram">TrainingProgram</a>.</small>
+
+<h5><a href="#instructor">ex:instructor</a></h5>
+<p>Instructor of the training program.</p>
+<p>Accepts <a href="#Jedi">Jedi</a> instances as values.</p>
+<small>To be used as a property for the class <a href="#TrainingProgram">TrainingProgram</a>.</small>
+
+<h5><a href="#durationYears">ex:durationYears</a></h5>
+<p>Duration of the training program in years.</p>
+<p>Accepts integers as values.</p>
+<small>To be used as a property for the class <a href="#TrainingProgram">TrainingProgram</a>.</small>
+
+<h5><a href="#capacity">ex:capacity</a></h5>
+<p>Capacity of the vehicle or starship.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="https://schema.org/Vehicle">schema:Vehicle</a>.</small>
+
+<h5><a href="#region">ex:region</a></h5>
+<p>Region where the planet is located.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Planet">Planet</a>.</small>
+
+<h5><a href="#climate">ex:climate</a></h5>
+<p>Climate of the planet.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Planet">Planet</a>.</small>
+
+<h5><a href="#population">ex:population</a></h5>
+<p>Population of the planet.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Planet">Planet</a>.</small>
+
+<h5><a href="#primarySpecies">ex:primarySpecies</a></h5>
+<p>Primary species inhabiting the planet.</p>
+<p>Accepts Text and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> elements as values.</p>
+<small>To be used as a property for the class <a href="#Planet">Planet</a>.</small>
+
+<h5><a href="#establishedYear">ex:establishedYear</a></h5>
+<p>Year the infrastructure or mission was established.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#TempleInfrastructure">TempleInfrastructure/a>.</small>
+
+<h5><a href="#purpose">ex:purpose</a></h5>
+<p>Purpose of the infrastructure or mission.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#TempleInfrastructure">TempleInfrastructure/a>.</small>
+
+<h5><a href="#facilities">ex:facilities</a></h5>
+<p>Facilities available in the infrastructure.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#TempleInfrastructure">TempleInfrastructure/a>.</small>
+
+<h5><a href="#objective">ex:objective</a></h5>
+<p>Objective of the mission.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Mission">Mission/a>.</small>
+
+
+<h5><a href="#clonesDeployed">ex:clonesDeployed</a></h5>
+<p>Number of clones deployed in the mission.</p>
+<p>Accepts integers as values.</p>
+<small>To be used as a property for the class <a href="#Mission">Mission/a>.</small>
+
+
+<h5><a href="#artifactType">ex:artifactType</a></h5>
+<p>Type of artifact.</p>
+<p>Accepts Text and <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> elements as values.</p>
+<small>To be used as a property for the class <a href="#Artifact">Artifact/a>.</small>
+
+<h5><a href="#origin">ex:origin</a></h5>
+<p>Origin of the artifact.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Artifact">Artifact/a>.</small>
+
+
+<h5><a href="#history">ex:history</a></h5>
+<p>History of the artifact.</p>
+<p>Accepts text as values.</p>
+<small>To be used as a property for the class <a href="#Artifact">Artifact/a>.</small>
+
+<br></br>
+
+<h3>Proprietary Relationships</h3> <!-------------------------------------------------------------------------->
+
+
+<h5><a href="#assignedTo">ex:assignedTo</a></h5>
+<p>Subject is assigned to a mission.</p>
+
+<h5><a href="#pilots">ex:pilots</a></h5>
+<p>Subject pilots a starship.</p>
+
+<h5><a href="#drives">ex:drives</a></h5>
+<p>Subject drives a ground vehicle.</p>
+
+<h5><a href="#inPossessionOf">ex:inPossessionOf</a></h5>
+<p>An Object in possession of a subject.</p>
+
+<h5><a href="#stationedAt">ex:stationedAt</a></h5>
+<p>Subject stationed at a part of the temple infrastructure.</p>
+
+
+
+        
+
+       
+    <!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small
+        >Built with <a href="https://picocss.com">Pico</a> •
+        <a href="https://github.com/picocss/examples/blob/master/v2-html/index.html"
+          >Source code</a
+        ></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- Modal example -->
+    <dialog id="modal-example">
+      <article>
+        <header>
+          <button
+            aria-label="Close"
+            rel="prev"
+            data-target="modal-example"
+            onclick="toggleModal(event)"
+          ></button>
+          <h3>Confirm your action!</h3>
+        </header>
+        <p>
+          Cras sit amet maximus risus. Pellentesque sodales odio sit amet augue finibus
+          pellentesque. Nullam finibus risus non semper euismod.
+        </p>
+        <footer>
+          <button
+            role="button"
+            class="secondary"
+            data-target="modal-example"
+            onclick="toggleModal(event)"
+          >
+            Cancel</button
+          ><button autofocus data-target="modal-example" onclick="toggleModal(event)">
+            Confirm
+          </button>
+        </footer>
+      </article>
+    </dialog>
+    <!-- ./ Modal example -->
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme-switcher.js"></script>
+
+    <!-- Modal -->
+    <script src="js/modal.js"></script>
+  </body>
+</html>
