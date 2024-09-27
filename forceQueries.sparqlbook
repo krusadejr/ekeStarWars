@@ -1,0 +1,26 @@
+[
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# 1\r\nPREFIX ex: <http://example.com/>\r\nPREFIX schema: <http://schema.org/>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n\r\nSELECT ?programName ?intendedLevel ?instructorName WHERE {\r\n  ?program rdf:type ex:TrainingProgram ;\r\n           schema:name ?programName ;\r\n           ex:intendedLevel ?intendedLevel ;\r\n           ex:instructor ?instructor .\r\n\r\n  ?instructor schema:name ?instructorName .\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# 2\r\nPREFIX ex: <http://example.com/>\r\nPREFIX schema: <http://schema.org/>\r\nPREFIX wd: <https://wikidata.org/wiki/>\r\n\r\nSELECT ?capacity ?speed WHERE {\r\n  wd:Q19913 schema:name \"Venator Star Destroyer\" ;\r\n            ex:capacity ?capacity ;\r\n            schema:speed ?speed .\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# 3 (ADVANCED)\r\nPREFIX ex: <http://example.com/>\r\nPREFIX schema: <http://schema.org/>\r\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n\r\nSELECT  ?finalCall \r\nWHERE {\r\n    ?jedi rdf:type ex:JediKnight .\r\n    ?jedi schema:name ?name .\r\n    ?jedi ex:species ?species .\r\n    ?jedi ex:homeworld ?homeworld .\r\n    ?jedi ex:lightsaberColor ?lightsaberColor .\r\n\r\n   \r\n    ?species schema:name ?speciesName .\r\n\r\n  \r\n    ?homeworld schema:name ?homeworldName .\r\n\r\n    BIND(CONCAT(?name, \" is a  \", ?speciesName, \" and has \", \r\n        ?lightsaberColor, \" as the lightsaber color.\") AS ?finalCall)\r\n}\r\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "#4 (ADVANCED)\r\nPREFIX ex:      <http://example.com/> \r\nPREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \r\nPREFIX schema:  <http://schema.org/> \r\nPREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#> \r\nPREFIX skos:    <http://www.w3.org/2004/02/skos/core#> \r\nPREFIX wd:      <https://wikidata.org/wiki/> \r\n\r\nSELECT ?missionName ?objective ?clones\r\nWHERE {\r\n    ?mission rdf:type ex:Mission .\r\n    ?mission schema:name ?missionName. \r\n    ?mission ex:objective ?objective.\r\n    ?mission ex:clonesDeployed ?clones.\r\n\r\nFILTER (?clones <= 100000)\r\n    \r\n}\r\nORDER BY ?clones",
+    "metadata": {}
+  }
+]
